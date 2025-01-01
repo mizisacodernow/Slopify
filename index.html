@@ -82,11 +82,6 @@ img {
           audio.play();
           showFullScreenImage("static/images/handsome.jpg", 1500, 1500);
         };
-	if (LUCKY_NUMBER === 1) {
-          audio.volume = 1;
-          audio.play();
-          showFullScreenImage("static/images/rupaul.png", 1500, 1500);
-		  };
       });
     </script>
     <style>
@@ -1955,5 +1950,43 @@ window.addEventListener('resize', handleResponsiveLayout);
           }
       }
     </script>
+		<style>
+    .corner-image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        animation: rotate 5s linear infinite;
+    }
+    .top-left {
+        top: 0;
+        left: 0;
+    }
+    .top-right {
+        top: 0;
+        right: 0;
+    }
+    .bottom-left {
+        bottom: 0;
+        left: 0;
+    }
+    .bottom-right {
+        bottom: 0;
+        right: 0;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<img src="URL" class="corner-image top-left" alt="Image 1">
+<img src="URL" class="corner-image top-right" alt="Image 2">
+<img src="URL" class="corner-image bottom-left" alt="Image 3">
+<img src="URL" class="corner-image bottom-right" alt="Image 4">
+  
 </body>
 </html>
